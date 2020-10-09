@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { StudentModel } from '../models/Student.model';
 
 
 @Injectable({
@@ -13,15 +15,15 @@ export class StudentService {
   constructor(private http: HttpClient) { }
 
 
-  getAllStudent() {
+  getAllStudent(){
     return this.http.get(`${this.API_URL}/students`);
   }
 
-  getStudent(){
-    return this.http.get(`${this.API_URL}/student`);
+  getStudent(id: string): Observable<StudentModel>{
+    return this.http.get<StudentModel>(`${this.API_URL}/student?id=${id}`);
   }
 
-  deleteStudent(){
+  deleteStudent(id: string){
     return this.http.delete('')
 
   }

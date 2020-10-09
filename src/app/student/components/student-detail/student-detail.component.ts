@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
+import { StudentService } from './../../../core/services/student.service';
+import { StudentModel } from './../../../core/models/Student.model';
 @Component({
   selector: 'app-student-detail',
   templateUrl: './student-detail.component.html',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentDetailComponent implements OnInit {
 
-  constructor() { }
+  student: StudentModel;
+
+  constructor(
+    private route: ActivatedRoute,
+    private studentService: StudentService
+    ) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      const id = params.id;
+      this.studentService.getStudent(id).subscribe((student: StudentModel) => {
+        console.log(student);
+        this.student = student;
+      });
+    });
   }
 
 }

@@ -1,1 +1,18 @@
-<p>student-list works!</p>
+<app-navbar></app-navbar>
+<div class="container-student-list">
+
+  <div class="box">
+
+    <div *ngFor="let student of studentslist">
+      <app-student-card
+        [student]="student"
+        (studentClicked)="clickStudent($event)">
+      </app-student-card>
+
+    </div>
+  </div>
+  <div class="box">
+    <h2>Crear un nuevo estudiante</h2>
+    <app-add-student></app-add-student>
+  </div>
+</div>

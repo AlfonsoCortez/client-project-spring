@@ -1,0 +1,21 @@
+.student-card{
+  background-color: rgba(236, 240, 241,0.5);
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 25px;
+  border-radius: 15px;
+  /* border: 1px solid #000; */
+}
+.student-card .btn-primary{
+  background-color: rgba(30, 55, 153,1.0);
+  border: none;
+  padding: 9px 14px;
+  color: #fff;
+  margin-top: 50px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.student-card .btn-primary:hover{
+  background-color: rgba(12, 36, 97,1.0);
+}

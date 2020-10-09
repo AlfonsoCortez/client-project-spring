@@ -1,0 +1,8 @@
+<div class="student-card">
+
+  <p><strong>{{student.name}} {{student.lastname}}</strong></p>
+
+  <p>¿Asistío? <strong>{{student.attendance}}</strong></p>
+  <br>
+  <a class="btn-primary" [routerLink]="['/student/student/' + student.id]">Ver detalles </a>
+</div>

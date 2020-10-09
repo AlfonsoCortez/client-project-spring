@@ -1,0 +1,23 @@
+.container-student-details{
+  width: 90%;
+  display: grid;
+  margin: 3em auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+.container-student-details .box{
+  width: 100%;
+  padding: 2em 2.5em;
+  /* border: 1px solid #000; */
+}
+
+.container-student-details .box:nth-of-type(1){
+  width: 100%;
+  /* display: flex; */
+  padding: 2em 2.5em;
+
+  /* border: 1px solid red; */
+}
+.container-student-details .box:nth-of-type(2){
+  /* border: 1px solid #000; */
+  background-color: rgba(236, 240, 241,0.5);
+}
