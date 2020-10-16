@@ -27,4 +27,11 @@ export class StudentDetailComponent implements OnInit {
     });
   }
 
+  deleteStudent(id: string){
+    console.log(id);
+
+    this.studentService.deleteStudent(id).subscribe(message => {
+      console.log(message);
+    });
+  }
 }

@@ -1,5 +1,5 @@
 export interface StudentModel {
-  id: string;
+  id?: string;
   name: string;
   lastname: string;
   attendance: boolean;

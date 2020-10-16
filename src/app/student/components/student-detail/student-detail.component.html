@@ -3,13 +3,17 @@
 
   <div class="box">
     <h2>{{student.name}}</h2>
+    <p><b>Id del usuario:</b> {{student.id}}</p>
     <p><b>Apellido:</b> {{student.lastname}}</p>
     <p><b>¿Asistío?</b> {{student.attendance}}</p>
-    <p><b>Id del usuario:</b> {{student.id}}</p>
+
+    <div class="container-student-details-botons">
+      <button [routerLink]="['/student/update/' + student.id]" mat-raised-button color="primary">Actualizar estudiante</button>
+      <button (click)="deleteStudent(student.id)" mat-stroked-button color="warn">Eliminar estudiante</button>
+    </div>
+
   </div>
 
-  <div class="box">
 
-  </div>
 
 </div>

@@ -1,6 +1,11 @@
 <app-navbar></app-navbar>
 <div class="container-student-list">
 
+  <div class="container-title">
+    <h3>Students list</h3>
+    <a routerLink="/student/add">add +</a>
+  </div>
+
   <div class="box">
 
     <div *ngFor="let student of studentslist">
@@ -10,9 +15,5 @@
       </app-student-card>
 
     </div>
-  </div>
-  <div class="box">
-    <h2>Crear un nuevo estudiante</h2>
-    <app-add-student></app-add-student>
   </div>
 </div>

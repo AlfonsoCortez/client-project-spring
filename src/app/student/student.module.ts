@@ -9,8 +9,9 @@ import { StudentCardComponent } from './components/student-card/student-card.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './../shared/shared.module';
 import { MaterialModule } from './../material/material.module';
+import { UpdateStudentComponent } from './components/update-student/update-student.component';
 @NgModule({
-  declarations: [StudentListComponent, StudentDetailComponent, AddStudentComponent, StudentCardComponent],
+  declarations: [StudentListComponent, StudentDetailComponent, AddStudentComponent, StudentCardComponent, UpdateStudentComponent],
   imports: [
     CommonModule,
     StudentRoutingModule,

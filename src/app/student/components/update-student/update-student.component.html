@@ -1,9 +1,9 @@
 <app-navbar></app-navbar>
 
-<div class="container-add-student">
+<div class="container-update-student">
 
   <div class="container-title">
-    <h3>Añadir un nuevo estudiante</h3>
+    <h3>Actualiza los datos de <b>{{student.name}} {{student.lastname}}</b></h3>
   </div>
 
   <form [formGroup]="form" (ngSubmit)="saveProduct($event)">

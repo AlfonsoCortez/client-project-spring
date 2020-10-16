@@ -24,17 +24,18 @@ export class StudentService {
   }
 
   deleteStudent(id: string){
-    return this.http.delete('')
-
+    return this.http.delete(`${this.API_URL}/student?id=${id}`);
   }
 
-  updateStudent(){
-    // return this.http.put('')
-
+  updateStudent(id: string, student: any){
+    return this.http.put(`${this.API_URL}/student?id=${id}`, student)
   }
 
-  createStudent(){
-    // return this.http.post()
+  createStudent(student: any){
+    console.log("data");
+    JSON.stringify(student)
+    console.log(student);
+    return this.http.post(`${this.API_URL}/student`, student);
   }
 
 

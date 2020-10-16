@@ -1,21 +1,48 @@
 .student-card{
-  background-color: rgba(236, 240, 241,0.5);
+  background-color: #fff;
+  /* width: ; */
   margin-top: 20px;
   font-size: 20px;
-  padding: 25px;
   border-radius: 15px;
-  /* border: 1px solid #000; */
+
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: grid;
+  grid-template-columns: 10% 1fr;
 }
+
+.student-card .banner{
+  background-color: rgba(85, 239, 196,0.5);
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.student-card .banner p {
+  margin-top: 88%;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+}
+
+.student-card .content{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
 .student-card .btn-primary{
-  background-color: rgba(30, 55, 153,1.0);
-  border: none;
-  padding: 9px 14px;
-  color: #fff;
-  margin-top: 50px;
+  /* background-color: rgb(22, 70, 56); */
+  /* padding: 9px 14px; */
+  color: rgb(22, 70, 56);
   font-size: 15px;
   text-decoration: none;
 }
 
 .student-card .btn-primary:hover{
-  background-color: rgba(12, 36, 97,1.0);
+  font-weight: bold;
 }
