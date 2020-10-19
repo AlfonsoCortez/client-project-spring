@@ -3,17 +3,16 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { StudentModel } from '../models/Student.model';
 
-
 @Injectable({
   providedIn: 'root'
 })
 
-
 export class StudentService {
-  API_URL: string = 'http://localhost:8080/api';
+  private API_URL: string = 'http://localhost:8080/api';
 
-  constructor(private http: HttpClient) { }
-
+  constructor(
+    private http: HttpClient
+    ) { }
 
   getAllStudent(){
     return this.http.get(`${this.API_URL}/students`);
@@ -32,12 +31,7 @@ export class StudentService {
   }
 
   createStudent(student: any){
-    console.log("data");
     JSON.stringify(student)
-    console.log(student);
     return this.http.post(`${this.API_URL}/student`, student);
   }
-
-
-
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { StudentService } from './../../../core/services/student.service';
 import { StudentModel } from './../../../core/models/Student.model';
@@ -14,7 +14,8 @@ export class StudentDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private studentService: StudentService
+    private studentService: StudentService,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -30,8 +31,9 @@ export class StudentDetailComponent implements OnInit {
   deleteStudent(id: string){
     console.log(id);
 
-    this.studentService.deleteStudent(id).subscribe(message => {
+    this.studentService.deleteStudent(id).subscribe(message=>{
       console.log(message);
     });
+    this.router.navigate(['/student'])
   }
 }

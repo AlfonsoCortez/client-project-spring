@@ -3,7 +3,10 @@
 
   <div class="container-title">
     <h3>Students list</h3>
-    <a routerLink="/student/add">add +</a>
+    <div class="container-bottons">
+      <button (click)="logout()" class="btnCerrar">Cerrar sesión</button>
+      <a routerLink="/student/add">+</a>
+    </div>
   </div>
 
   <div class="box">

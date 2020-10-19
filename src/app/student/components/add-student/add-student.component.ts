@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StudentModel } from 'src/app/core/models/Student.model';
 import { StudentService } from './../../../core/services/student.service';
@@ -16,22 +17,21 @@ export class AddStudentComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private studentService: StudentService
+    private studentService: StudentService,
+    private router: Router
   ) {
     this.buildForm();
    }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {  }
 
   saveProduct(event: Event){
     event.preventDefault();
     this.form.value.attendance = this.form.value.attendance ? this.form.value.attendance = true : this.form.value.attendance = false;
-    console.log(typeof this.form.value.attendance);
     this.studentService.createStudent(this.form.value).subscribe(student => {
       console.log(student);
     });
+    this.router.navigate([`/student/students`]);
   }
 
   private buildForm(){

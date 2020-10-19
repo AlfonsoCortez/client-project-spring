@@ -25,7 +25,27 @@
 .container-title h3{
   font-size: 2em;
 }
-.container-title a{
+.container-title .container-bottons{
+  width: 15%;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-bottons button{
+  background-color: transparent;
+  font-size: 1.4em;
+  color: #000;
+  margin-right: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.container-bottons button:hover{
+  /* color: rgb(27,84,93); */
+  border-bottom: 1px solid #000;
+}
+.container-title .container-bottons a{
   font-size: 2em;
   color: #00b894;
   text-decoration: none;

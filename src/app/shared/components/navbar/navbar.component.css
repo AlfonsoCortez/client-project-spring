@@ -4,7 +4,6 @@ header{
   width: 100%;
   max-height: 120px;
   margin-bottom: 20px;
-  /* box-shadow: 0px -2px 8px 0px black; */
 
   display: flex;
   flex-direction: column;
@@ -14,9 +13,9 @@ header{
 
 header nav:nth-of-type(1){
   width: 50%;
+  margin-top: 15px;
   display: flex;
   justify-content: space-around;
-  /* border: 1px solid #000; */
 }
 
 header nav:nth-of-type(1) > h2{
@@ -31,15 +30,19 @@ header nav:nth-of-type(2){
   width: 50%;
   display: flex;
   justify-content: space-around;
-  /* border: 1px solid #000; */
 }
 
-header nav:nth-of-type(2) > a{
+header nav:nth-of-type(2) > a, button{
   font-family: 'Source Code Pro', monospace;
   padding:  5px 15px;
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 5px;
+}
+header nav:nth-of-type(2) > button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 header nav > a{

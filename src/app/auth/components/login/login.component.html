@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div class="container-login">
+  <div class="container-background-login">
+    <h2>Iniciar sesión</h2>
+    <form [formGroup]="form" (ngSubmit)="login($event)">
+
+      <label for="">Ingrese el correo</label>
+      <mat-form-field>
+        <input formControlName="email" matInput type="email" placeholder="Correo del usuario">
+      </mat-form-field>
+
+      <label for="">Ingrese la contraseña</label>
+      <mat-form-field>
+        <input formControlName="password" matInput type="password" placeholder="Contraseña del usuario">
+      </mat-form-field>
+
+      <mat-error *ngIf="form.get('email').invalid || form.get('password').invalid">Los campos no son correctos o estan vacios.</mat-error>
+      <button mat-raised-button color="primary" type="submit" *ngIf="form.get('email').valid || form.get('password').valid">Iniciar sesion</button>
+
+    </form>
+  </div>
+</div>

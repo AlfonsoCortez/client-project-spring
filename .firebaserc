@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cliente-springboot": {
+      "hosting": {
+        "ClientSchool": [
+          "cliente-springboot"
+        ]
+      }
+    }
+  }
+}

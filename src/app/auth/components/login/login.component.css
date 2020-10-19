@@ -1,0 +1,21 @@
+.container-login{
+  background-color: rgb(239,239,239);
+  width: 100%;
+  min-height: 80%;
+}
+.container-background-login{
+  width: 60%;
+  padding-top: 20px;
+  margin: 0 auto;
+  /* border: 1px solid #000; */
+}
+
+.container-background-login h2{
+  font-size: 2em;
+}
+
+.container-background-login form{
+  display: flex;
+  flex-direction: column;
+}
+

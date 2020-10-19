@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="container-register">
+  <div class="container-background-register">
+    <h2>Crear una cuenta</h2>
+    <form [formGroup]="formRegister" (ngSubmit)="register($event)">
+
+      <!-- <label for="">Ingrese el correo</label> -->
+      <mat-form-field>
+        <input formControlName="email" matInput type="text" placeholder="Correo del usuario">
+      </mat-form-field>
+
+      <!-- <label for="">Ingrese la contraseña</label> -->
+      <mat-form-field>
+        <input formControlName="password" matInput type="password" placeholder="Contraseña del usuario">
+      </mat-form-field>
+
+      <mat-error *ngIf="formRegister.get('email').invalid || formRegister.get('password').invalid">Los campos no son correctos o estan vacios.</mat-error>
+      <button mat-raised-button color="primary" type="submit" *ngIf="formRegister.get('email').valid && formRegister.get('password').valid">Iniciar sesion</button>
+
+    </form>
+
+  </div>
+</div>
+

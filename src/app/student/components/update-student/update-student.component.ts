@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StudentModel } from 'src/app/core/models/Student.model';
 import { StudentService } from './../../../core/services/student.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-student',
@@ -18,6 +18,7 @@ export class UpdateStudentComponent implements OnInit {
     private formBuilder: FormBuilder,
     private studentService: StudentService,
     private route: ActivatedRoute,
+    private router: Router,
   ) {
     this.buildForm();
    }
@@ -26,8 +27,6 @@ export class UpdateStudentComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
       this.studentService.getStudent(id).subscribe((student: StudentModel) => {
-        console.log("estudiante encontrado");
-        console.log(student);
         this.student = student;
       });
     });
@@ -42,6 +41,7 @@ export class UpdateStudentComponent implements OnInit {
     this.studentService.updateStudent(this.student.id, this.form.value).subscribe(student => {
       console.log(student);
     });
+    this.router.navigate([`/student/student/${this.student.id}`]);
   }
 
   private buildForm(){
